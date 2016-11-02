@@ -21,11 +21,11 @@ import com.dzaitsev.rxviper.sample.dagger.Job;
 import com.dzaitsev.rxviper.sample.dagger.Main;
 import com.dzaitsev.rxviper.sample.data.CheeseStorage;
 import com.dzaitsev.rxviper.sample.presentation.CheeseViewModel;
+import io.reactivex.Flowable;
+import io.reactivex.Scheduler;
 import java.util.Collection;
 import javax.inject.Inject;
 import javax.inject.Singleton;
-import rx.Observable;
-import rx.Scheduler;
 
 /**
  * ~ ~ ~ ~ Description ~ ~ ~ ~
@@ -45,7 +45,7 @@ public final class GetCheesesInteractor extends Interactor<Integer, Collection<C
     this.mapper = mapper;
   }
 
-  @Override protected Observable<Collection<CheeseViewModel>> createObservable(Integer amount) {
+  @Override protected Flowable<Collection<CheeseViewModel>> createFlowable(Integer amount) {
     return storage.getCheeses(amount)
         .map(mapper::map);
   }

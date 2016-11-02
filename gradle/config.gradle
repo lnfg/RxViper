@@ -32,13 +32,13 @@ ext {
       retrolambdaPlugin: '3.3.1',
       aptPlugin        : '1.8',
       // Java libraries
-      rxJava           : '1.2.1',
+      rxJava           : '2.0.0',
       dagger           : '2.7',
       junit            : '4.12',
       mockito          : '2.2.3', // don't update to 2.2.4/2.2.9 because code coverage decreases
       truth            : '0.30',
       // Android libraries
-      rxAndroid        : '1.2.1',
+      rxAndroid        : '2.0.0',
       support          : '25.0.0',
       constraintLayout : '1.0.0-alpha7',
   ]
@@ -54,7 +54,7 @@ ext {
 
   libraries = [
       // Java
-      rxJava          : "io.reactivex:rxjava:${versions.rxJava}",
+      rxJava          : "io.reactivex.rxjava2:rxjava:${versions.rxJava}",
       dagger          : "com.google.dagger:dagger:${versions.dagger}",
       daggerCompiler  : "com.google.dagger:dagger-compiler:${versions.dagger}",
       // Android
@@ -62,7 +62,7 @@ ext {
       appCompat       : "com.android.support:appcompat-v7:${versions.support}",
       design          : "com.android.support:design:${versions.support}",
       cardView        : "com.android.support:cardview-v7:${versions.support}",
-      rxAndroid       : "io.reactivex:rxandroid:${versions.rxAndroid}",
+      rxAndroid       : "io.reactivex.rxjava2:rxandroid:${versions.rxAndroid}",
       // Test
       junit           : "junit:junit:${versions.junit}",
       mockito         : "org.mockito:mockito-core:${versions.mockito}",

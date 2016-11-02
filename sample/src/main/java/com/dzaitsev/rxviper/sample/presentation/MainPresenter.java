@@ -39,7 +39,7 @@ final class MainPresenter extends ViperPresenter<MainViewCallbacks, MainRouter> 
 
   @Override protected void onDropView(MainViewCallbacks view) {
     /* The best place to unsubscribe all your interactors */
-    interactor.unsubscribe();
+    interactor.dispose();
   }
 
   @Override protected void onTakeView(MainViewCallbacks view) {
